@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		190CC4E2204DEC2E00040AEF /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CC4E1204DEC2E00040AEF /* CarrinhoViewController.swift */; };
+		190CC4E4204DF17200040AEF /* CarrinhoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CC4E3204DF17200040AEF /* CarrinhoTableViewCell.swift */; };
+		190D6B8F2051AFA2006EDD03 /* LabelBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */; };
+		190D6B912051B933006EDD03 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B902051B933006EDD03 /* ContatosViewController.swift */; };
+		190D6B9A2051BC6F006EDD03 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B992051BC6F006EDD03 /* Pizza.swift */; };
+		190D6B9C2051BCE8006EDD03 /* Bebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B9B2051BCE8006EDD03 /* Bebida.swift */; };
+		190D6B9E2051BD26006EDD03 /* ItemCompravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B9D2051BD26006EDD03 /* ItemCompravel.swift */; };
+		190D6BA32051C110006EDD03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6BA22051C110006EDD03 /* AppDelegate.swift */; };
+		190D6BA52051C152006EDD03 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 190D6BA42051C152006EDD03 /* Info.plist */; };
+		192198552050546A006BE42A /* imageViewBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192198542050546A006BE42A /* imageViewBlackBorder.swift */; };
+		1921985820507EFD006BE42A /* CardapioHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921985720507EFD006BE42A /* CardapioHeaderView.swift */; };
+		1921985A20507F16006BE42A /* CardapioHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1921985920507F16006BE42A /* CardapioHeaderView.xib */; };
+		192E169B20487A9900F60B2E /* history.txt in Resources */ = {isa = PBXBuildFile; fileRef = 192E169A20487A9900F60B2E /* history.txt */; };
+		1930B8EC204DA10700B02FF0 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930B8EB204DA10700B02FF0 /* ModalViewController.swift */; };
+		193147B12049B4DE00AA9DDD /* CardapioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193147B02049B4DE00AA9DDD /* CardapioViewController.swift */; };
+		193147B32049BCD300AA9DDD /* PizzasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */; };
+		195A85E7204F13CB00011FF2 /* Carrinho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A85E6204F13CB00011FF2 /* Carrinho.swift */; };
+		19AC4808204716080030F7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AC4806204716080030F7FB /* Main.storyboard */; };
+		19AC480A204716080030F7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AC4809204716080030F7FB /* Assets.xcassets */; };
+		19AC480D204716080030F7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AC480B204716080030F7FB /* LaunchScreen.storyboard */; };
+		19AC482020472C6E0030F7FB /* LocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC481F20472C6E0030F7FB /* LocalizacaoViewController.swift */; };
+		19AC484020473BC70030F7FB /* HistoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC483F20473BC70030F7FB /* HistoriaViewController.swift */; };
+		C9BC550B022ABFF7BFE3E21D /* Pods_Pizzaria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE0F902D47F9D62C3A42954 /* Pods_Pizzaria.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		190CC4E1204DEC2E00040AEF /* CarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
+		190CC4E3204DF17200040AEF /* CarrinhoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoTableViewCell.swift; sourceTree = "<group>"; };
+		190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBlackBorder.swift; sourceTree = "<group>"; };
+		190D6B902051B933006EDD03 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
+		190D6B992051BC6F006EDD03 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		190D6B9B2051BCE8006EDD03 /* Bebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebida.swift; sourceTree = "<group>"; };
+		190D6B9D2051BD26006EDD03 /* ItemCompravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCompravel.swift; sourceTree = "<group>"; };
+		190D6BA22051C110006EDD03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		190D6BA42051C152006EDD03 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192198542050546A006BE42A /* imageViewBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewBlackBorder.swift; sourceTree = "<group>"; };
+		1921985720507EFD006BE42A /* CardapioHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardapioHeaderView.swift; sourceTree = "<group>"; };
+		1921985920507F16006BE42A /* CardapioHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardapioHeaderView.xib; sourceTree = "<group>"; };
+		192E169A20487A9900F60B2E /* history.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = history.txt; sourceTree = SOURCE_ROOT; };
+		1930B8EB204DA10700B02FF0 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		193147B02049B4DE00AA9DDD /* CardapioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardapioViewController.swift; sourceTree = "<group>"; };
+		193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasTableViewCell.swift; sourceTree = "<group>"; };
+		195A85E6204F13CB00011FF2 /* Carrinho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrinho.swift; sourceTree = "<group>"; };
+		19AC47FF204716080030F7FB /* Pizzaria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizzaria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AC4807204716080030F7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19AC4809204716080030F7FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19AC480C204716080030F7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19AC481F20472C6E0030F7FB /* LocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoViewController.swift; sourceTree = "<group>"; };
+		19AC483F20473BC70030F7FB /* HistoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoriaViewController.swift; sourceTree = "<group>"; };
+		3AE0F902D47F9D62C3A42954 /* Pods_Pizzaria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizzaria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0CF4C8CA2B5EE54EDF782F7 /* Pods-Pizzaria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaria.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pizzaria/Pods-Pizzaria.debug.xcconfig"; sourceTree = "<group>"; };
+		F21C7B40DBB465C469C9F4AB /* Pods-Pizzaria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaria.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pizzaria/Pods-Pizzaria.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19AC47FC204716080030F7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BC550B022ABFF7BFE3E21D /* Pods_Pizzaria.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		190D6B922051BADE006EDD03 /* Cardapio */ = {
+			isa = PBXGroup;
+			children = (
+				193147B02049B4DE00AA9DDD /* CardapioViewController.swift */,
+				1921985720507EFD006BE42A /* CardapioHeaderView.swift */,
+				193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */,
+				1921985920507F16006BE42A /* CardapioHeaderView.xib */,
+			);
+			path = Cardapio;
+			sourceTree = "<group>";
+		};
+		190D6B932051BB56006EDD03 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1930B8EB204DA10700B02FF0 /* ModalViewController.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		190D6B942051BB81006EDD03 /* Historia */ = {
+			isa = PBXGroup;
+			children = (
+				19AC483F20473BC70030F7FB /* HistoriaViewController.swift */,
+			);
+			path = Historia;
+			sourceTree = "<group>";
+		};
+		190D6B952051BB91006EDD03 /* Localizacao */ = {
+			isa = PBXGroup;
+			children = (
+				19AC481F20472C6E0030F7FB /* LocalizacaoViewController.swift */,
+			);
+			path = Localizacao;
+			sourceTree = "<group>";
+		};
+		190D6B962051BBA4006EDD03 /* Contatos */ = {
+			isa = PBXGroup;
+			children = (
+				190D6B902051B933006EDD03 /* ContatosViewController.swift */,
+			);
+			path = Contatos;
+			sourceTree = "<group>";
+		};
+		190D6B972051BBB1006EDD03 /* Carrinho */ = {
+			isa = PBXGroup;
+			children = (
+				190CC4E1204DEC2E00040AEF /* CarrinhoViewController.swift */,
+				190CC4E3204DF17200040AEF /* CarrinhoTableViewCell.swift */,
+			);
+			path = Carrinho;
+			sourceTree = "<group>";
+		};
+		190D6B982051BC37006EDD03 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				195A85E6204F13CB00011FF2 /* Carrinho.swift */,
+				190D6B992051BC6F006EDD03 /* Pizza.swift */,
+				190D6B9B2051BCE8006EDD03 /* Bebida.swift */,
+				190D6B9D2051BD26006EDD03 /* ItemCompravel.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		1921985620505471006BE42A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				192198542050546A006BE42A /* imageViewBlackBorder.swift */,
+				190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19AC47F6204716080030F7FB = {
+			isa = PBXGroup;
+			children = (
+				19AC4801204716080030F7FB /* Pizzaria */,
+				19AC4800204716080030F7FB /* Products */,
+				26EB4E006D6705A8FA142CC3 /* Pods */,
+				AEB5542B641E46D23F52D14F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		19AC4800204716080030F7FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19AC47FF204716080030F7FB /* Pizzaria.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19AC4801204716080030F7FB /* Pizzaria */ = {
+			isa = PBXGroup;
+			children = (
+				190D6B972051BBB1006EDD03 /* Carrinho */,
+				190D6B962051BBA4006EDD03 /* Contatos */,
+				190D6B952051BB91006EDD03 /* Localizacao */,
+				190D6B942051BB81006EDD03 /* Historia */,
+				190D6B922051BADE006EDD03 /* Cardapio */,
+				190D6B932051BB56006EDD03 /* Modal */,
+				1921985620505471006BE42A /* Extensions */,
+				19AC481820471CC60030F7FB /* txt */,
+				19AC4814204716320030F7FB /* View */,
+				190D6B982051BC37006EDD03 /* Objects */,
+				190D6BA22051C110006EDD03 /* AppDelegate.swift */,
+				190D6BA42051C152006EDD03 /* Info.plist */,
+			);
+			path = Pizzaria;
+			sourceTree = "<group>";
+		};
+		19AC4814204716320030F7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19AC4806204716080030F7FB /* Main.storyboard */,
+				19AC480B204716080030F7FB /* LaunchScreen.storyboard */,
+				19AC4809204716080030F7FB /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19AC481820471CC60030F7FB /* txt */ = {
+			isa = PBXGroup;
+			children = (
+				192E169A20487A9900F60B2E /* history.txt */,
+			);
+			path = txt;
+			sourceTree = "<group>";
+		};
+		26EB4E006D6705A8FA142CC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0CF4C8CA2B5EE54EDF782F7 /* Pods-Pizzaria.debug.xcconfig */,
+				F21C7B40DBB465C469C9F4AB /* Pods-Pizzaria.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEB5542B641E46D23F52D14F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AE0F902D47F9D62C3A42954 /* Pods_Pizzaria.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19AC47FE204716080030F7FB /* Pizzaria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19AC4811204716080030F7FB /* Build configuration list for PBXNativeTarget "Pizzaria" */;
+			buildPhases = (
+				C634CF1EADDB664FC24EAFF3 /* [CP] Check Pods Manifest.lock */,
+				19AC47FB204716080030F7FB /* Sources */,
+				19AC47FC204716080030F7FB /* Frameworks */,
+				19AC47FD204716080030F7FB /* Resources */,
+				423EFD1E28694B3EABCFBC6D /* [CP] Embed Pods Frameworks */,
+				0A3B4C85BBE757C4DF783B11 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pizzaria;
+			productName = Pizzaria;
+			productReference = 19AC47FF204716080030F7FB /* Pizzaria.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19AC47F7204716080030F7FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Nodo Digital";
+				TargetAttributes = {
+					19AC47FE204716080030F7FB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 19AC47FA204716080030F7FB /* Build configuration list for PBXProject "Pizzaria" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19AC47F6204716080030F7FB;
+			productRefGroup = 19AC4800204716080030F7FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19AC47FE204716080030F7FB /* Pizzaria */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19AC47FD204716080030F7FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AC480D204716080030F7FB /* LaunchScreen.storyboard in Resources */,
+				19AC480A204716080030F7FB /* Assets.xcassets in Resources */,
+				190D6BA52051C152006EDD03 /* Info.plist in Resources */,
+				19AC4808204716080030F7FB /* Main.storyboard in Resources */,
+				1921985A20507F16006BE42A /* CardapioHeaderView.xib in Resources */,
+				192E169B20487A9900F60B2E /* history.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A3B4C85BBE757C4DF783B11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pizzaria/Pods-Pizzaria-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		423EFD1E28694B3EABCFBC6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pizzaria/Pods-Pizzaria-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pizzaria/Pods-Pizzaria-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C634CF1EADDB664FC24EAFF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pizzaria-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19AC47FB204716080030F7FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AC484020473BC70030F7FB /* HistoriaViewController.swift in Sources */,
+				1930B8EC204DA10700B02FF0 /* ModalViewController.swift in Sources */,
+				190D6B8F2051AFA2006EDD03 /* LabelBlackBorder.swift in Sources */,
+				190D6B9A2051BC6F006EDD03 /* Pizza.swift in Sources */,
+				193147B12049B4DE00AA9DDD /* CardapioViewController.swift in Sources */,
+				195A85E7204F13CB00011FF2 /* Carrinho.swift in Sources */,
+				192198552050546A006BE42A /* imageViewBlackBorder.swift in Sources */,
+				193147B32049BCD300AA9DDD /* PizzasTableViewCell.swift in Sources */,
+				190D6BA32051C110006EDD03 /* AppDelegate.swift in Sources */,
+				19AC482020472C6E0030F7FB /* LocalizacaoViewController.swift in Sources */,
+				190CC4E2204DEC2E00040AEF /* CarrinhoViewController.swift in Sources */,
+				190D6B9C2051BCE8006EDD03 /* Bebida.swift in Sources */,
+				190CC4E4204DF17200040AEF /* CarrinhoTableViewCell.swift in Sources */,
+				190D6B912051B933006EDD03 /* ContatosViewController.swift in Sources */,
+				1921985820507EFD006BE42A /* CardapioHeaderView.swift in Sources */,
+				190D6B9E2051BD26006EDD03 /* ItemCompravel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19AC4806204716080030F7FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19AC4807204716080030F7FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19AC480B204716080030F7FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19AC480C204716080030F7FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19AC480F204716080030F7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19AC4810204716080030F7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19AC4812204716080030F7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0CF4C8CA2B5EE54EDF782F7 /* Pods-Pizzaria.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP67A7X2A3;
+				INFOPLIST_FILE = Pizzaria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com..Pizzaria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19AC4813204716080030F7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F21C7B40DBB465C469C9F4AB /* Pods-Pizzaria.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP67A7X2A3;
+				INFOPLIST_FILE = Pizzaria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com..Pizzaria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19AC47FA204716080030F7FB /* Build configuration list for PBXProject "Pizzaria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AC480F204716080030F7FB /* Debug */,
+				19AC4810204716080030F7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19AC4811204716080030F7FB /* Build configuration list for PBXNativeTarget "Pizzaria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AC4812204716080030F7FB /* Debug */,
+				19AC4813204716080030F7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19AC47F7204716080030F7FB /* Project object */;
+}
