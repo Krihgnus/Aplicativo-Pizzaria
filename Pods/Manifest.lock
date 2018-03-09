@@ -1,14 +1,21 @@
 PODS:
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
+  - GoogleMaps
   - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: 7530bb244852901f831379dcb05845aef484fc89
+PODFILE CHECKSUM: 6773b9994173a059a3a37f85ddb0d2fe741a5033
 
 COCOAPODS: 1.4.0

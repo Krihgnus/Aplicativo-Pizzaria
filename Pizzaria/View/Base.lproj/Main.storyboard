@@ -574,36 +574,32 @@
                                 <color key="textColor" red="0.015772076323628426" green="0.047072820365428925" blue="0.035291954874992371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7M-iZ-DlV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-XI-oxD" userLabel="Map View">
                                 <rect key="frame" x="0.0" y="140" width="375" height="478"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="d0g-ry-2Wh" firstAttribute="bottom" secondItem="K7M-iZ-DlV" secondAttribute="bottom" id="58h-d5-bYO"/>
-                            <constraint firstItem="K7M-iZ-DlV" firstAttribute="centerX" secondItem="d0g-ry-2Wh" secondAttribute="centerX" id="FaU-j5-Gb0"/>
-                            <constraint firstItem="K7M-iZ-DlV" firstAttribute="trailing" secondItem="d0g-ry-2Wh" secondAttribute="trailing" id="dVP-Ab-ohb"/>
+                            <constraint firstItem="RW2-XI-oxD" firstAttribute="top" secondItem="8dm-h5-hAb" secondAttribute="bottom" constant="10" id="29J-jM-qK0"/>
+                            <constraint firstItem="RW2-XI-oxD" firstAttribute="trailing" secondItem="d0g-ry-2Wh" secondAttribute="trailing" id="TC1-Cx-YUs"/>
                             <constraint firstItem="8dm-h5-hAb" firstAttribute="leading" secondItem="d0g-ry-2Wh" secondAttribute="leading" id="daq-2X-fAy"/>
+                            <constraint firstItem="RW2-XI-oxD" firstAttribute="bottom" secondItem="d0g-ry-2Wh" secondAttribute="bottom" id="jrT-c8-4Dz"/>
                             <constraint firstItem="8dm-h5-hAb" firstAttribute="trailing" secondItem="d0g-ry-2Wh" secondAttribute="trailing" id="knZ-X1-2io"/>
-                            <constraint firstItem="K7M-iZ-DlV" firstAttribute="top" secondItem="8dm-h5-hAb" secondAttribute="bottom" constant="10" id="rIT-2M-dIO"/>
                             <constraint firstItem="8dm-h5-hAb" firstAttribute="top" secondItem="d0g-ry-2Wh" secondAttribute="top" id="reh-jH-lIS"/>
+                            <constraint firstItem="RW2-XI-oxD" firstAttribute="leading" secondItem="d0g-ry-2Wh" secondAttribute="leading" id="wKF-PH-Uas"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d0g-ry-2Wh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Localização" id="X3d-kW-YEj"/>
                     <connections>
+                        <outlet property="mapViewContainer" destination="RW2-XI-oxD" id="ais-cd-G2X"/>
                         <outlet property="tituloLocalizacao" destination="8dm-h5-hAb" id="Z4E-ND-Yfz"/>
-                        <outlet property="webView" destination="K7M-iZ-DlV" id="wVE-KN-oxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxo-gL-V0C" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="-368"/>
+            <point key="canvasLocation" x="1168.8" y="-368.36581709145429"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yx4-jf-5q6">

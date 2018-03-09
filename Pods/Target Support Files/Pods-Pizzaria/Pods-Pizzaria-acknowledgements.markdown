@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## GoogleMaps
+
+Copyright 2017 Google
+
 ## SDWebImage
 
 Copyright (c) 2009-2017 Olivier Poitrey rs@dailymotion.com
