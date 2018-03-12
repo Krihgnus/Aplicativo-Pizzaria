@@ -32,7 +32,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="titleLabel" destination="PFJ-4b-vNd" id="8vK-y0-7Ni"/>
+                <outlet property="titleLabel" destination="PFJ-4b-vNd" id="lU7-HF-Fn3"/>
             </connections>
         </view>
     </objects>

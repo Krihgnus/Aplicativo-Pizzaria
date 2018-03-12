@@ -17,12 +17,12 @@
 		190D6BA32051C110006EDD03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6BA22051C110006EDD03 /* AppDelegate.swift */; };
 		190D6BA52051C152006EDD03 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 190D6BA42051C152006EDD03 /* Info.plist */; };
 		192198552050546A006BE42A /* imageViewBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192198542050546A006BE42A /* imageViewBlackBorder.swift */; };
-		1921985820507EFD006BE42A /* CardapioHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921985720507EFD006BE42A /* CardapioHeaderView.swift */; };
 		1921985A20507F16006BE42A /* CardapioHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1921985920507F16006BE42A /* CardapioHeaderView.xib */; };
 		192E169B20487A9900F60B2E /* history.txt in Resources */ = {isa = PBXBuildFile; fileRef = 192E169A20487A9900F60B2E /* history.txt */; };
 		1930B8EC204DA10700B02FF0 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930B8EB204DA10700B02FF0 /* ModalViewController.swift */; };
 		193147B12049B4DE00AA9DDD /* CardapioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193147B02049B4DE00AA9DDD /* CardapioViewController.swift */; };
 		193147B32049BCD300AA9DDD /* PizzasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */; };
+		1942E0E020530DA700D87EB5 /* CardapioSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942E0DF20530DA700D87EB5 /* CardapioSectionHeaderView.swift */; };
 		195A85E7204F13CB00011FF2 /* Carrinho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A85E6204F13CB00011FF2 /* Carrinho.swift */; };
 		19AC4808204716080030F7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AC4806204716080030F7FB /* Main.storyboard */; };
 		19AC480A204716080030F7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AC4809204716080030F7FB /* Assets.xcassets */; };
@@ -43,12 +43,12 @@
 		190D6BA22051C110006EDD03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190D6BA42051C152006EDD03 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192198542050546A006BE42A /* imageViewBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewBlackBorder.swift; sourceTree = "<group>"; };
-		1921985720507EFD006BE42A /* CardapioHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardapioHeaderView.swift; sourceTree = "<group>"; };
 		1921985920507F16006BE42A /* CardapioHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardapioHeaderView.xib; sourceTree = "<group>"; };
 		192E169A20487A9900F60B2E /* history.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = history.txt; sourceTree = SOURCE_ROOT; };
 		1930B8EB204DA10700B02FF0 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		193147B02049B4DE00AA9DDD /* CardapioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardapioViewController.swift; sourceTree = "<group>"; };
 		193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasTableViewCell.swift; sourceTree = "<group>"; };
+		1942E0DF20530DA700D87EB5 /* CardapioSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardapioSectionHeaderView.swift; path = Pizzaria/CardapioSectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		195A85E6204F13CB00011FF2 /* Carrinho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrinho.swift; sourceTree = "<group>"; };
 		19AC47FF204716080030F7FB /* Pizzaria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizzaria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AC4807204716080030F7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				193147B02049B4DE00AA9DDD /* CardapioViewController.swift */,
-				1921985720507EFD006BE42A /* CardapioHeaderView.swift */,
+				1942E0DF20530DA700D87EB5 /* CardapioSectionHeaderView.swift */,
 				193147B22049BCD300AA9DDD /* PizzasTableViewCell.swift */,
 				1921985920507F16006BE42A /* CardapioHeaderView.xib */,
 			);
@@ -362,11 +362,11 @@
 				193147B32049BCD300AA9DDD /* PizzasTableViewCell.swift in Sources */,
 				190D6BA32051C110006EDD03 /* AppDelegate.swift in Sources */,
 				19AC482020472C6E0030F7FB /* LocalizacaoViewController.swift in Sources */,
+				1942E0E020530DA700D87EB5 /* CardapioSectionHeaderView.swift in Sources */,
 				190CC4E2204DEC2E00040AEF /* CarrinhoViewController.swift in Sources */,
 				190D6B9C2051BCE8006EDD03 /* Bebida.swift in Sources */,
 				190CC4E4204DF17200040AEF /* CarrinhoTableViewCell.swift in Sources */,
 				190D6B912051B933006EDD03 /* ContatosViewController.swift in Sources */,
-				1921985820507EFD006BE42A /* CardapioHeaderView.swift in Sources */,
 				190D6B9E2051BD26006EDD03 /* ItemCompravel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

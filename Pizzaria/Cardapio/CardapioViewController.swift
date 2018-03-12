@@ -13,13 +13,8 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSalgadas.rowHeight = 350
-        pizzas.append(Pizza(nome: "Coração", ingredientes: "(Molho, Coração, Mussarela e Orégano)", preco: 35.0, imageLink: URL(string: "https://krihgnus.github.io/imagens/coracao.jpg")!))
-        pizzas.append(Pizza(nome: "Calabresa", ingredientes: "(Molho, Calabresa, Cebola, Azeitonas, Mussarela e Orégano)", preco: 30.0, imageLink: URL(string: "https://krihgnus.github.io/imagens/calabresa.jpg")!))
-        pizzas.append(Pizza(nome: "Strogonoff", ingredientes: "(Molho, Lombo, Azeitonas, Mussarela e Orégano)", preco: 28.0, imageLink: URL(string: "https://krihgnus.github.io/imagens/strogonoff.jpg")!))
-        pizzas.append(Pizza(nome: "Portuguesa", ingredientes: "(Molho, Cebola, Tomate, Presunto, Pimentão, Ovo, Azeitonas, Mussarela e Orégano)", preco: 39.0, imageLink: URL(string: "https://krihgnus.github.io/imagens/portuguesa.jpg")!))
-        bebidas.append(Bebida(nome: "Coca Cola", conteudo: "2 Litros", preco: 7.0, imageLink: URL(string: "https://krihgnus.github.io/imagens/coca2L.jpg")!))
-        bebidas.append(Bebida(nome: "Guaraná Antartica", conteudo: "2 Litros", preco: 5.5, imageLink: URL(string: "https://krihgnus.github.io/imagens/guarana.jpg")!))
         tituloCardapio.blackBorder()
+        getJsonFromUrl()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,7 +23,7 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-           return pizzas.count
+            return pizzas.count
         } else {
             return bebidas.count
         }
@@ -84,4 +79,60 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func getJsonFromUrl() {
+        guard let url = URL(string: "https://rawgit.com/Krihgnus/4624dc2984e859ea34dc430cda25b39c/raw/2e3602aacb08c745a4ae98d2349346af66b02b32/cardapio.json") else { return }
+        
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+            
+            if let arrayDicts = (try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)) as? [[String : Any]] {
+                for dict in arrayDicts {
+                    let tipo = dict["tipo"] as? String
+                    
+                    if let dictiValores = dict["valores"] as? [[String: Any]] {
+                        for item in dictiValores {
+                            var nomeItem = ""
+                            var precoItem = 0.0
+                            var urlImageItem: URL!
+                            
+                            if let nome = item["nome"] as? String {
+                                nomeItem = nome
+                            }
+                            
+                            if let preco = item["preco"] as? Double {
+                                precoItem = preco
+                            }
+                            
+                            if let strLink = item["urlImagem"] as? String {
+                                urlImageItem = URL(string: strLink)
+                            }
+                            
+                            if tipo == "pizzas" {
+                                var ingredientes = ""
+                                
+                                if let arrIngredientes = item["ingredientes"] as? [String] {
+                                    for (key, ingrediente) in arrIngredientes.enumerated() {
+                                        if key == 0 {
+                                            ingredientes = "\(ingrediente)"
+                                        } else {
+                                            ingredientes += ", \(ingrediente)"
+                                        }
+                                    }
+                                }
+                                
+                                pizzas.append(Pizza(nome: nomeItem, ingredientes: ingredientes, preco: precoItem, imageLink: urlImageItem))
+                            } else {
+                                var conteudo = ""
+                                
+                                if let conteudoBebida = item["conteudo"] as? String {
+                                    conteudo = conteudoBebida
+                                }
+                                
+                                bebidas.append(Bebida(nome: nomeItem, conteudo: conteudo, preco: precoItem, imageLink: urlImageItem))
+                            }
+                        }
+                    }
+                }
+            }
+        }).resume()
+    }
 }

@@ -24,6 +24,7 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         tituloCarrinho.blackBorder()
+        botaoConfirmarCompraOut.layer.cornerRadius = 6.0
     }
     
     override func viewWillAppear(_ animated: Bool) {

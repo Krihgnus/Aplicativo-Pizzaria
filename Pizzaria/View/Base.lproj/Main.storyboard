@@ -131,7 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carrinho" id="cUv-Ug-Xi8"/>
+                    <tabBarItem key="tabBarItem" title="Carrinho" image="cart" selectedImage="cart" id="cUv-Ug-Xi8"/>
                     <connections>
                         <outlet property="botaoConfirmarCompraOut" destination="orS-UR-puK" id="FRK-i2-Xag"/>
                         <outlet property="carrinhoVazio" destination="1Nm-EA-ngO" id="05U-N5-ycV"/>
@@ -239,7 +239,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eQQ-F5-DbM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contatos" id="PaT-mb-uPV"/>
+                    <tabBarItem key="tabBarItem" title="Contatos" image="phone" selectedImage="phone" id="PaT-mb-uPV"/>
                     <connections>
                         <outlet property="tituloContatos" destination="uI8-D7-RFX" id="fil-2J-gqm"/>
                     </connections>
@@ -297,9 +297,9 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oXQ-IV-TyS" secondAttribute="bottom" constant="-23" id="7S9-Ac-PVX"/>
                                     <constraint firstItem="oXQ-IV-TyS" firstAttribute="leading" secondItem="KJG-tZ-P8k" secondAttribute="leading" constant="50" id="N79-Ra-bAK"/>
                                     <constraint firstItem="oXQ-IV-TyS" firstAttribute="centerX" secondItem="KJG-tZ-P8k" secondAttribute="centerX" id="RZN-z3-lRd"/>
-                                    <constraint firstAttribute="bottom" secondItem="oXQ-IV-TyS" secondAttribute="bottom" id="rQ4-eB-FYP"/>
                                     <constraint firstItem="oXQ-IV-TyS" firstAttribute="top" secondItem="T1G-mt-X77" secondAttribute="bottom" constant="10" id="z1d-zC-Ixu"/>
                                     <constraint firstAttribute="trailing" secondItem="oXQ-IV-TyS" secondAttribute="trailing" constant="50" id="zY2-6h-p8f"/>
                                 </constraints>
@@ -308,16 +308,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="T1G-mt-X77" firstAttribute="trailing" secondItem="zCz-0Y-hO6" secondAttribute="trailing" id="4k1-we-gpP"/>
+                            <constraint firstItem="KJG-tZ-P8k" firstAttribute="bottom" secondItem="zCz-0Y-hO6" secondAttribute="bottom" id="CuV-G7-74K"/>
                             <constraint firstItem="KJG-tZ-P8k" firstAttribute="top" secondItem="zCz-0Y-hO6" secondAttribute="top" id="L3i-cc-C6g"/>
                             <constraint firstItem="T1G-mt-X77" firstAttribute="top" secondItem="zCz-0Y-hO6" secondAttribute="top" id="N5e-6w-YVq"/>
                             <constraint firstItem="T1G-mt-X77" firstAttribute="leading" secondItem="zCz-0Y-hO6" secondAttribute="leading" id="YGF-WA-SzL"/>
                             <constraint firstItem="KJG-tZ-P8k" firstAttribute="trailing" secondItem="zCz-0Y-hO6" secondAttribute="trailing" id="hbC-ov-Cbu"/>
-                            <constraint firstItem="KJG-tZ-P8k" firstAttribute="bottom" secondItem="zCz-0Y-hO6" secondAttribute="bottom" id="uZk-aj-TLC"/>
                             <constraint firstItem="KJG-tZ-P8k" firstAttribute="leading" secondItem="zCz-0Y-hO6" secondAttribute="leading" id="zUN-2j-nIc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zCz-0Y-hO6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="História" id="KUa-59-KrB"/>
+                    <tabBarItem key="tabBarItem" title="História" image="info" selectedImage="info" id="KUa-59-KrB"/>
                     <connections>
                         <outlet property="descricaoHis" destination="rig-41-vcp" id="ekx-gP-4c2"/>
                         <outlet property="tituloHistoria" destination="T1G-mt-X77" id="jKm-0U-a9y"/>
@@ -419,7 +419,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVV-la-6gp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cardápio" id="QHx-sJ-wrU"/>
+                    <tabBarItem key="tabBarItem" title="Cardápio" image="menu" selectedImage="menu" id="QHx-sJ-wrU"/>
                     <connections>
                         <outlet property="tableViewSalgadas" destination="cuu-Ej-mpc" id="qAM-pj-uuz"/>
                         <outlet property="tituloCardapio" destination="aaw-5i-8hf" id="s78-BF-tiv"/>
@@ -591,7 +591,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d0g-ry-2Wh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Localização" id="X3d-kW-YEj"/>
+                    <tabBarItem key="tabBarItem" title="Localização" image="map" selectedImage="map" id="X3d-kW-YEj"/>
                     <connections>
                         <outlet property="mapViewContainer" destination="RW2-XI-oxD" id="ais-cd-G2X"/>
                         <outlet property="tituloLocalizacao" destination="8dm-h5-hAb" id="Z4E-ND-Yfz"/>
@@ -626,8 +626,13 @@
     </scenes>
     <resources>
         <image name="arroba" width="720" height="720"/>
+        <image name="cart" width="24" height="24"/>
         <image name="facebook" width="512" height="512"/>
+        <image name="info" width="26" height="26"/>
         <image name="logo" width="512" height="512"/>
+        <image name="map" width="26" height="26"/>
+        <image name="menu" width="24" height="24"/>
+        <image name="phone" width="26" height="26"/>
         <image name="telefone" width="800" height="800"/>
     </resources>
 </document>
