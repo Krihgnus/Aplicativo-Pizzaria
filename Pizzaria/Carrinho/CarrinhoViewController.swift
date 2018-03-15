@@ -8,7 +8,6 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var valorTotalLabel: UILabel!
     @IBOutlet weak var botaoConfirmarCompraOut: UIButton!
-    @IBOutlet weak var tituloCarrinho: UILabel!
     var total: Double = 0
     
     @IBAction func botaoConfirmarCompra(_ sender: Any) {
@@ -23,7 +22,6 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tituloCarrinho.blackBorder()
         botaoConfirmarCompraOut.layer.cornerRadius = 6.0
     }
     

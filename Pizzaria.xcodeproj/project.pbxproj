@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		190CC4E2204DEC2E00040AEF /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CC4E1204DEC2E00040AEF /* CarrinhoViewController.swift */; };
 		190CC4E4204DF17200040AEF /* CarrinhoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CC4E3204DF17200040AEF /* CarrinhoTableViewCell.swift */; };
-		190D6B8F2051AFA2006EDD03 /* LabelBlackBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */; };
 		190D6B912051B933006EDD03 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B902051B933006EDD03 /* ContatosViewController.swift */; };
 		190D6B9A2051BC6F006EDD03 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B992051BC6F006EDD03 /* Pizza.swift */; };
 		190D6B9C2051BCE8006EDD03 /* Bebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D6B9B2051BCE8006EDD03 /* Bebida.swift */; };
@@ -35,7 +34,6 @@
 /* Begin PBXFileReference section */
 		190CC4E1204DEC2E00040AEF /* CarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		190CC4E3204DF17200040AEF /* CarrinhoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoTableViewCell.swift; sourceTree = "<group>"; };
-		190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBlackBorder.swift; sourceTree = "<group>"; };
 		190D6B902051B933006EDD03 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		190D6B992051BC6F006EDD03 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		190D6B9B2051BCE8006EDD03 /* Bebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebida.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				192198542050546A006BE42A /* imageViewBlackBorder.swift */,
-				190D6B8E2051AFA2006EDD03 /* LabelBlackBorder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 			files = (
 				19AC484020473BC70030F7FB /* HistoriaViewController.swift in Sources */,
 				1930B8EC204DA10700B02FF0 /* ModalViewController.swift in Sources */,
-				190D6B8F2051AFA2006EDD03 /* LabelBlackBorder.swift in Sources */,
 				190D6B9A2051BC6F006EDD03 /* Pizza.swift in Sources */,
 				193147B12049B4DE00AA9DDD /* CardapioViewController.swift in Sources */,
 				195A85E7204F13CB00011FF2 /* Carrinho.swift in Sources */,

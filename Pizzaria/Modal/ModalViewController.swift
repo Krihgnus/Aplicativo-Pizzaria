@@ -9,6 +9,23 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var labelPreco: UILabel!
     var elemento: ItemCompravel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let pizza = elemento as? Pizza {
+            imageViewPizza.sd_setImage(with: pizza.link, completed: nil)
+            labelIngredientes.text = pizza.ingredients
+        }
+        
+        if let bebida = elemento as? Bebida {
+            imageViewPizza.sd_setImage(with: bebida.link, completed: nil)
+            labelIngredientes.text = bebida.content
+        }
+        
+        labelNomePizza.text = elemento.name
+        labelPreco.text = "R$ \(elemento.price)0"
+        imageViewPizza.blackBorder()
+    }
+    
     @IBAction func buttonCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -16,24 +33,6 @@ class ModalViewController: UIViewController {
     @IBAction func buttonAdd(_ sender: Any) {
         Carrinho.compartilhado.itens.append(elemento)
         dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let pizza = elemento as? Pizza {
-            labelNomePizza.text = pizza.name
-            imageViewPizza.sd_setImage(with: pizza.link, completed: nil)
-            labelIngredientes.text = pizza.ingredients
-            labelPreco.text = "R$ \(pizza.price)0"
-        }
-        
-        if let bebida = elemento as? Bebida {
-            labelNomePizza.text = bebida.name
-            imageViewPizza.sd_setImage(with: bebida.link, completed: nil)
-            labelIngredientes.text = bebida.content
-            labelPreco.text = "R$ \(bebida.price)0"
-        }
-        imageViewPizza.blackBorder()
     }
     
 }

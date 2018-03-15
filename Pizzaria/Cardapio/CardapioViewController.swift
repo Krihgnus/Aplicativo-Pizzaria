@@ -8,13 +8,38 @@ var bebidas: [Bebida] = []
 class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewSalgadas: UITableView!
-    @IBOutlet weak var tituloCardapio: UILabel!
+    let searchController = UISearchController(searchResultsController: nil)
+    var pizzasFiltradas: [Pizza] = []
+    var bebidasFiltradas: [Bebida] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Pesquisar no cardápio"
+        definesPresentationContext = true
         tableViewSalgadas.rowHeight = 350
-        tituloCardapio.blackBorder()
         getJsonFromUrl()
+    }
+    
+    func searchBarIsEmpty () -> Bool {
+        return searchController.searchBar.text? .isEmpty ?? true
+    }
+    
+    func isFiltering () -> Bool {
+        return searchController.isActive && searchBarIsEmpty()
+    }
+    
+    func filterContentForSearchText ( _ searchText: String ) {
+        if searchText != "" {
+            pizzasFiltradas = pizzas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+            bebidasFiltradas = bebidas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+        } else {
+            pizzasFiltradas = pizzas
+            bebidasFiltradas = bebidas
+        }
+        tableViewSalgadas.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,9 +48,9 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return pizzas.count
+            return pizzasFiltradas.count
         } else {
-            return bebidas.count
+            return bebidasFiltradas.count
         }
     }
     
@@ -45,24 +70,25 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PizzaTableViewCell.identifier, for: indexPath) as? PizzaTableViewCell else {
-            debugPrint("Deu ruim....")
             return UITableViewCell()
         }
         
         if indexPath.section == 0 {
-            cell.pizzaNameLabel.text = pizzas[indexPath.row].name
-            cell.pizzaIngredientsLabel.text = pizzas[indexPath.row].ingredients
-            cell.pizzaPriceLabel.text = "R$ \(pizzas[indexPath.row].price)0"
-            cell.pizzaImage.sd_setImage(with: pizzas[indexPath.row].link, completed: nil)
+            cell.pizzaImage.sd_setImage(with: pizzasFiltradas[indexPath.row].link, completed: nil)
+            cell.pizzaNameLabel.text = pizzasFiltradas[indexPath.row].name
+            cell.pizzaIngredientsLabel.text = pizzasFiltradas[indexPath.row].ingredients
+            cell.pizzaPriceLabel.text = "R$ \(pizzasFiltradas[indexPath.row].price)0"
         } else {
-            cell.pizzaNameLabel.text = bebidas[indexPath.row].name
-            cell.pizzaIngredientsLabel.text = bebidas[indexPath.row].content
-            cell.pizzaPriceLabel.text = "R$ \(bebidas[indexPath.row].price)0"
-            cell.pizzaImage.sd_setImage(with: bebidas[indexPath.row].link, completed: nil)
+            cell.pizzaImage.sd_setImage(with: bebidasFiltradas[indexPath.row].link, completed: nil)
+            cell.pizzaNameLabel.text = bebidasFiltradas[indexPath.row].name
+            cell.pizzaIngredientsLabel.text = bebidasFiltradas[indexPath.row].content
+            cell.pizzaPriceLabel.text = "R$ \(bebidasFiltradas[indexPath.row].price)0"
         }
+        
         cell.pizzaImage.contentMode = .scaleToFill
         cell.selectionStyle = .none
         cell.pizzaImage.blackBorder()
+        
         return cell
     }
     
@@ -71,10 +97,11 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
             modal.modalPresentationStyle = .overCurrentContext
             modal.modalTransitionStyle = .crossDissolve
             if indexPath.section == 0 {
-                modal.elemento = pizzas[indexPath.row]
+                modal.elemento = pizzasFiltradas[indexPath.row]
             } else {
-                modal.elemento = bebidas[indexPath.row]
+                modal.elemento = bebidasFiltradas[indexPath.row]
             }
+            self.dismiss(animated: false, completion: nil)
             present(modal, animated: true, completion: nil)
         }
     }
@@ -130,9 +157,22 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
                                 bebidas.append(Bebida(nome: nomeItem, conteudo: conteudo, preco: precoItem, imageLink: urlImageItem))
                             }
                         }
+                        self.pizzasFiltradas = pizzas
+                        self.bebidasFiltradas = bebidas
+                        DispatchQueue.main.async {
+                            self.tableViewSalgadas.reloadData()
+                        }
+
                     }
                 }
             }
         }).resume()
     }
+}
+
+extension ViewControllerCardapio: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
 }
