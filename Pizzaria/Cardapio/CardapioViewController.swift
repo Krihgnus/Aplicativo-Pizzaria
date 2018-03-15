@@ -8,6 +8,7 @@ var bebidas: [Bebida] = []
 class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewSalgadas: UITableView!
+    @IBOutlet weak var searchFooter: UIView!
     let searchController = UISearchController(searchResultsController: nil)
     var pizzasFiltradas: [Pizza] = []
     var bebidasFiltradas: [Bebida] = []
@@ -18,8 +19,11 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Pesquisar no cardápio"
+        searchController.searchBar.scopeButtonTitles = ["Todos" , "Pizzas" , "Bebidas"]
+        searchController.searchBar.delegate = self
         definesPresentationContext = true
         tableViewSalgadas.rowHeight = 350
+        tableViewSalgadas.tableFooterView = searchFooter
         getJsonFromUrl()
     }
     
@@ -28,17 +32,34 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     }
     
     func isFiltering () -> Bool {
-        return searchController.isActive && searchBarIsEmpty()
+        let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive && (searchBarIsEmpty() || searchBarScopeIsFiltering == true)
     }
     
-    func filterContentForSearchText ( _ searchText: String ) {
-        if searchText != "" {
-            pizzasFiltradas = pizzas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
-            bebidasFiltradas = bebidas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
-        } else {
+    func filterContentForSearchText ( _ searchText: String, scope: String = "Todos" ) {
+        if scope == "Todos" {
             pizzasFiltradas = pizzas
             bebidasFiltradas = bebidas
+        } else if scope == "Pizzas" {
+            pizzasFiltradas = pizzas
+            bebidasFiltradas = []
+        } else {
+            pizzasFiltradas = []
+            bebidasFiltradas = bebidas
         }
+        
+        if searchText != "" {
+            pizzasFiltradas = pizzasFiltradas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+            bebidasFiltradas = bebidasFiltradas.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+        }
+        
+        tableViewSalgadas.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        pizzasFiltradas = pizzas
+        bebidasFiltradas = bebidas
+        searchBar.selectedScopeButtonIndex = 0
         tableViewSalgadas.reloadData()
     }
     
@@ -172,7 +193,15 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
 
 extension ViewControllerCardapio: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText (searchController.searchBar.text!, scope: scope)
     }
     
+}
+
+extension ViewControllerCardapio: UISearchBarDelegate  {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+         filterContentForSearchText (searchBar.text! , scope: searchBar.scopeButtonTitles![selectedScope])
+    }
 }
