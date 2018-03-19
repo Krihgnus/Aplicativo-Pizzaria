@@ -8,7 +8,6 @@ var bebidas: [Bebida] = []
 class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewSalgadas: UITableView!
-    @IBOutlet weak var searchFooter: UIView!
     let searchController = UISearchController(searchResultsController: nil)
     var pizzasFiltradas: [Pizza] = []
     var bebidasFiltradas: [Bebida] = []
@@ -23,7 +22,6 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
         searchController.searchBar.delegate = self
         definesPresentationContext = true
         tableViewSalgadas.rowHeight = 350
-        tableViewSalgadas.tableFooterView = searchFooter
         getJsonFromUrl()
     }
     
@@ -59,8 +57,8 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         pizzasFiltradas = pizzas
         bebidasFiltradas = bebidas
-        searchBar.selectedScopeButtonIndex = 0
         tableViewSalgadas.reloadData()
+        searchBar.selectedScopeButtonIndex = 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,15 +113,12 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let modal = storyboard?.instantiateViewController(withIdentifier: "modalVC") as? ModalViewController {
-            modal.modalPresentationStyle = .overCurrentContext
-            modal.modalTransitionStyle = .crossDissolve
             if indexPath.section == 0 {
                 modal.elemento = pizzasFiltradas[indexPath.row]
             } else {
                 modal.elemento = bebidasFiltradas[indexPath.row]
             }
-            self.dismiss(animated: false, completion: nil)
-            present(modal, animated: true, completion: nil)
+            navigationController?.pushViewController(modal, animated: true)
         }
     }
     
@@ -189,6 +184,18 @@ class ViewControllerCardapio: UIViewController, UITableViewDelegate, UITableView
             }
         }).resume()
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "cardapioToDetalhe" {
+//            guard let targetVC = segue.destination as? ModalViewController else { return }
+//            if sectionCell == 0 {
+//                targetVC.elemento = pizzasFiltradas[indiceCell]
+//            } else {
+//                targetVC.elemento = bebidasFiltradas[indiceCell]
+//            }
+//        }
+//    }
+    
 }
 
 extension ViewControllerCardapio: UISearchResultsUpdating {

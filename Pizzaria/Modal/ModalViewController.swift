@@ -15,24 +15,23 @@ class ModalViewController: UIViewController {
             imageViewPizza.sd_setImage(with: pizza.link, completed: nil)
             labelIngredientes.text = pizza.ingredients
         }
-        
+
         if let bebida = elemento as? Bebida {
             imageViewPizza.sd_setImage(with: bebida.link, completed: nil)
             labelIngredientes.text = bebida.content
         }
-        
+
         labelNomePizza.text = elemento.name
         labelPreco.text = "R$ \(elemento.price)0"
         imageViewPizza.blackBorder()
     }
     
-    @IBAction func buttonCancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func buttonAdd(_ sender: Any) {
         Carrinho.compartilhado.itens.append(elemento)
-        dismiss(animated: true, completion: nil)
+        let alerta = UIAlertController(title: nil, message: "Seu item foi adicionado ao carrinho!", preferredStyle: UIAlertControllerStyle.alert)
+        alerta.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alerta, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 }
